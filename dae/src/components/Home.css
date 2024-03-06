@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    height: 92vh;
+    width: 100vw;
+    background-image: url(./images/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.main_box{
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+}
+
+.heading h1 {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 6.1rem;
+}
+
+.heading p{
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.7rem ;
+}
+
+.heading h1 span{
+    color: red;
+}
+
+.heading{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width:1500px){
+    .heading h1{
+        font-size: 5rem;
+    }
+
+    .heading p{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width:1030px){
+    .heading h1{
+        font-size: 4.5rem;
+    }
+
+
+    .heading{
+        width: 60%;
+    }
+}
+
+@media (max-width:770px){
+    .heading h1{
+        font-size: 3rem;
+    }
+
+    .heading{
+        width: 70%;
+    }
+}
+
+@media (max-width:440px) {
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .heading p{
+        font-size: 1rem;
+    }
+
+    .heading {
+        width: 80%;
+    }
+}
+
+@media (max-width:330px) {
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .heading p {
+        font-size: 1rem;
+    }
+
+    .heading {
+        width: 90%;
+    }
+}
+
+
+
+
+
