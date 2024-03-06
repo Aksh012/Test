@@ -1,25 +1,26 @@
 from flask import Flask, send_from_directory, Response
 import subprocess
+from pathlib import Path
 
 app = Flask(__name__)
 
 react_folder = 'dae'
-directory = f'{react_folder}/build/static'
+directory = Path(react_folder) / 'build' / 'static'
 
 
 @app.route('/')
 def index():
     ''' User will call with their id to store the symbol as registered'''
-    path = f'{react_folder}/build'
+    path = Path(react_folder) / 'build'
     print(path)
-    return send_from_directory(directory=path, path='index.html')
+    return send_from_directory(directory=str(directory), path='index.html')
 
 
 @app.route('/static/<folder>/<file>')
 def css(folder, file):
     ''' User will call with their id to store the symbol as registered'''
-    path = f'{folder}/{file}'
-    return send_from_directory(directory=directory, path=path)
+    path = directory / folder / file
+    return send_from_directory(directory=str(directory), path=str(path))
 
 
 @app.route('/runcanvas', methods=['POST'])
